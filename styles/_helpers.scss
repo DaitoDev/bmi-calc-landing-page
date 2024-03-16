@@ -1,0 +1,26 @@
+html{
+    font-family: "Roboto", sans-serif;
+  }
+
+  h1{
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  p{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    max-width: 55ch;
+    color: rgb(58, 58, 58);
+  }
+
+  .flex-row{
+    @include flex(row, space-evenly, center)
+  }
+
+  .flex-col{
+    @include flex(column, space-evenly, center)
+  }
+
+ 

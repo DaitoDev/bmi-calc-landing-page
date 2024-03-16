@@ -1,0 +1,538 @@
+// Imports 
+@import './variables';
+@import './mixins';
+@import './helpers';
+
+// TO BE REMOVED 
+section{
+    min-height: calc(100vh / 3);
+    margin: 4rem 4rem;
+}
+
+.yourBMI{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.section-tt{
+    font-size: 2.5rem;
+  }
+
+// TO BE REMOVED 
+
+.hero-bg{
+    min-width: 100%;
+    position: absolute;
+    top: -60px;
+    left: 1px;
+    @include flex(row, space-between, center);
+
+    div{
+        min-height: 600px;
+    }
+
+    .hero-blue{
+        width: 70%;
+        background: linear-gradient(to right bottom, white, $secondaryClr);
+        border-bottom-left-radius: $br2;
+        border-bottom-right-radius: $br2;
+        margin: 0 0.5rem;
+    }
+
+    .hero-white{
+        background-color: white;
+        width: 30%
+    }
+}
+
+.main{
+    min-height: 100vh;
+    max-width: 1280px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+
+    background-color: white;
+
+    .logo{
+        position: absolute;
+        top: 0px;
+        left: 64px;
+        z-index: 1;
+        max-width: 40px;
+    }
+}
+
+// HERO SECTION 
+.hero-section{
+    position: relative;
+
+    // container containing title and calculator 
+    .hero-info{
+        @include flex(row, space-between, center);
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+
+
+        h1{
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title p{
+            max-width: 426px;
+        }
+
+        // CALCULATOR BOX 
+        .calc-container{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-evenly;
+            gap: 2rem;
+            
+            padding: 1.5rem;
+            font-family: arial;
+            border-radius: .75rem;
+            box-shadow: $bs-1;
+
+            h4{
+                font-size: 1.5rem;
+            }
+            // UNITS 
+            .units{
+                min-width: 100%;
+                display: flex;
+                gap: 12.2rem;
+                font-weight: bold;
+            }
+
+            // INPUTS 
+            .inputs{
+                display: flex;
+                gap: 1rem;
+
+                p{
+                color: rgb(114, 114, 114);
+
+                }
+
+                .input-des{
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: $primaryClr;
+                }
+
+
+                .input-1-box, .input-2-box{
+                    display: flex;
+                    gap: 0.5rem;
+                    border: 1px solid lightgray;
+                    padding: 0.5rem;
+                    border-radius: 0.25rem;
+                  }
+
+
+                  input{
+                    border: none;
+                    outline: none;
+                    font-family: inherit;
+                    max-width: 130px;
+                  }
+              }
+
+            //   RESULTS BOX 
+              .results{
+                background-color: $primaryClr;
+                color: white;
+                min-width: 100%;
+                padding: 1.5rem 1rem;
+                border-radius: 6px;
+                border-top-right-radius: 5rem;
+                border-bottom-right-radius: 5rem;
+
+                p{
+                    color: white;
+                }
+              }
+              
+            }
+    }
+}
+
+
+// INFO SECTION 
+.info-section{
+    @include flex(row, space-between, center);
+    margin-top: 20rem;
+
+    .info-img{
+        max-width: 30%;
+    }
+}
+
+// Cards section 
+.cards{
+    @include flex(row, space-evenly, center);
+    gap: 1.5rem;
+    background: linear-gradient(to right bottom, white, $secondaryClr);
+    border-radius: $br2;
+    padding: 2rem;
+
+    .info-card{
+        @include flex(column, center, start);
+        gap: 0.5rem;
+
+        .card-logo{
+            max-width: 50px
+        }
+    }
+}
+
+
+
+// CLOSING SECTION 
+.closing-section{
+    @include flex(column);
+;
+
+    .closing-cont-1, .closing-cont-2, .closing-cont-3{
+        @include flex(row, space-between, center);
+    }
+
+    .closing-card{
+        max-width: 300px;
+        padding: 1.2rem;
+        border-radius: $br1;
+        box-shadow: $bs-1;
+        margin: 0.75rem;
+
+        .closing-header{
+            @include flex(row, start, center);
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .closing-cont-1{
+        @include flex(row, end, center);
+        gap: 2rem;
+        width: 100%;
+        position: relative;
+
+
+        .closing-title{
+            position: absolute;
+            left: 1rem;
+        }
+        .closing-title h3{
+            margin-bottom: 1rem;
+        }
+
+        .closing-card{
+            margin-right: 6rem;
+        }
+    }
+
+    .closing-cont-2{
+        min-width: 100%;
+        justify-content: end;
+    }
+
+    .closing-img{
+        max-width: 30px;
+    }
+}
+
+
+
+// SCREEN SIZE MEDIA QUERIES 
+@media (max-width:1020px){
+    // BLUE BACKGROUND SQUARE 
+    section{
+        margin: 4rem 1.5rem;
+    }
+
+    .section-tt{
+        font-size: 1.8rem;
+    }
+
+    .hero-bg{
+       
+        .hero-blue{
+            width: 100%;
+        }
+    
+        .hero-white{
+            width: 0%;
+        }
+    }
+
+    // MAIN AND LOGO 
+    .main{
+
+        .logo{
+            left: 0px;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // HERO 
+    .hero-section{
+
+        .hero-info{
+            @include flex(column, space-evenly, center);
+            gap: 2rem;
+
+            .hero-title{
+                text-align: center;
+
+                p{
+                    max-width: 797px;
+        
+        
+                    }
+            }
+        }
+    }
+
+    // INFO SECTTION 
+    .info-section{
+        @include flex(row, space-between, center);
+        margin-top: 27rem;
+    
+        .info-img{
+            max-width: 40%;
+        }
+    }
+
+
+    .cards{
+        @include flex(column, center, center);
+        gap: 2rem;
+    
+        .info-card{
+            @include flex(row, center, center);
+            gap: 3rem;
+    
+
+            .card-des p{
+                margin-top: 1rem;
+            }
+
+            .card-logo{
+                max-width:70px;
+            }
+        }
+    }
+
+    // CLOSING SECTION 
+.closing-section{
+    @include flex(column);
+
+    .closing-cont-1, .closing-cont-2, .closing-cont-3{
+        @include flex(row, space-between, center);
+    }
+
+    .closing-card{
+        max-width: 400px;
+
+        .closing-header{
+            @include flex(row, start, center);
+            gap: 0.5rem;
+        }
+    }
+
+    .closing-cont-1{
+        @include flex(column, center, center);
+        width: 100%;
+      
+        .closing-title{
+            left: 0px;
+            right: 0px;
+            margin: 0 auto;
+            top: -40px;
+            @include flex(column);
+        }
+
+        .closing-card{
+            margin-top: 10rem;
+            margin-right: 0px;
+        }
+    }
+
+    .closing-cont-2{
+        min-width: 100%;
+        justify-content: center;
+    }
+
+    .closing-img{
+        max-width: 30px;
+    }
+}
+
+}
+
+@media (max-width: 715px ){
+    section{
+        margin: 3rem 1rem;
+    }
+
+    .hero-section{
+        position: relative;
+    
+        // container containing title and calculator 
+
+        
+        .hero-info{
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin-right: auto;
+            margin-left: auto;
+    
+            
+    
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+    
+            .hero-title p{
+                max-width: 426px;
+            }
+    
+            // CALCULATOR BOX 
+            .calc-container{
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 2rem;
+                text-align: center;
+                
+                padding: 1rem;
+                font-family: arial;
+                border-radius: .75rem;
+                box-shadow: $bs-1;
+    
+                h4{
+                    font-size: 1.4rem;
+                }
+                // UNITS 
+                .units{
+                    min-width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    gap: 6rem;
+                    font-weight: bold;
+                }
+    
+                // INPUTS 
+                .inputs{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+    
+                    p{
+                    color: rgb(114, 114, 114);
+    
+                    }
+    
+                    .input-des{
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: $primaryClr;
+                    }
+    
+    
+                    .input-1-box, .input-2-box{
+                        display: flex;
+                        gap: 0.5rem;
+                        border: 1px solid lightgray;
+                        padding: 0.5rem;
+                        border-radius: 0.25rem;
+                      }
+    
+    
+                      input{
+                        border: none;
+                        outline: none;
+                        font-family: inherit;
+                        max-width: none;
+                      }
+                  }
+    
+                //   RESULTS BOX 
+                  .results{
+                    background-color: $primaryClr;
+                    color: white;
+                    padding: 1.5rem 1rem;
+                    border-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+    
+                    p{
+                        color: white;
+                    }
+                  }
+                  
+                }
+        }
+    }
+
+
+
+
+
+    .info-section{
+        @include flex(column);
+        gap: 1rem;
+        margin-top:36rem;
+
+
+        .info-img{
+            max-width: 70%;
+        }
+        .info-msg{
+            text-align:center;
+        }
+    }
+
+    .cards{
+
+
+        .info-card{
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    .closing-section{
+
+
+        .closing-cont-1{
+
+
+            .closing-title{
+                top: -20px;
+            }
+        }
+
+        .closing-cont-2, .closing-cont-3{
+            flex-direction: column;
+        }
+    }
+}

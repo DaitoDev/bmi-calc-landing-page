@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS  -->
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS SHEETS  -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Icon in title  -->
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <title></title>
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="hero-bg">
+            <!-- this will be the bacground  -->
+            <div class="hero-blue"></div>
+            <div class="hero-white"></div>
+        </div>
+
+        <div class="logo">
+            <img src="./images/009-nutrition.png" alt="">
+        </div>
+        <section class="hero-section">
+            <div class="hero-info">
+                <div class="hero-title">
+                    <h1>Body Mass <br> Index Calculator</h1>
+                    <p>Better understand your weight in relation to your height using
+                        our body mass index (BMI) calculator. While BMI is not the
+                        sole determinant of a healthy weight, it offers a valuable
+                        starting point to evaluate your overall health and well-being.</p>
+                </div>
+                <!-- <div class="hero-calculator"> -->
+                <div class="calc-container">
+                    <h4>Enter your details here</h4>
+
+                    <div class="units">
+                        <!--     unit 1 -->
+                        <div class="unit-1">
+                            <input type="radio" name="units" value="metric" id="metric">
+                            <lable>Metric</lable>
+                        </div>
+
+                        <!--     unit 2 -->
+                        <div class="unit-2">
+                            <input type="radio" name="units" value="imperial" id="imperial">
+                            <lable>Imperial</lable>
+                        </div>
+
+                    </div>
+
+                    <!--   Inputs  -->
+                    <div class="inputs">
+                        <div class="input-1">
+                            <p>Height</p>
+                            <div class="input-1-box">
+                                <input type="number" class="input" id="ht" placeholder="0"> <span
+                                    class="input-des">cm</span>
+                            </div>
+                        </div>
+
+                        <div class="input-1">
+                            <p>Weight</p>
+                            <div class="input-2-box">
+                                <input type="number" class="input" id="wt" placeholder="0"> <span
+                                    class="input-des">kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results">
+                        <p class="yourBMI">Your BMI is...</p>
+                        <h4 class="bmiResults">Welcome!</h4>
+                        <p class="result">Enter your height and weight and you'll see your BMI result here</p>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-img">
+                <img src="./images/info-img.jpeg" alt="3D art of fit female eating a salad" srcset="">
+            </div>
+            <div class="info-msg">
+                <h2 class="section-tt">What your BMI result <br> means</h2>
+                <p>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+                    Maintaining a healthy weight may lower your chances of
+                    experiencing health issues early on, such as obesity and type
+                    2 diabetes. Aim for a nuturious diet with reduced fat and
+                    sugar content, incorporating ample fruits and vegetables.
+                    Additionally, strive for a regular physical activity, ideally about
+                    30 minutes daily for five days a week.</p>
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="info-card">
+                <div class="card-logo">
+                    <img src="./images/001-food.png" alt="">
+                </div>
+                <div class="card-des">
+                    <h4>Healthy eating</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iusto, expedita amet recusandae
+                        libero modi ipsam. Aliquid beatae ea unde.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-logo">
+                    <img src="./images/002-dumbbell.png" alt="">
+                </div>
+                <div class="card-des">
+                    <h4>Regular exercise</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iusto, expedita amet recusandae
+                        libero modi ipsam. Aliquid beatae ea unde.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-logo">
+                    <img src="./images/003-sleeping.png" alt="">
+                </div>
+                <div class="card-des">
+                    <h4>Adequate sleep</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iusto, expedita amet recusandae
+                        libero modi ipsam. Aliquid beatae ea unde.</p>
+                    </di>
+                </div>
+        </section>
+
+        <!-- CLOSING SECTION  -->
+        <section class="closing-section">
+            <div class="closing-cont-1">
+                <div class="closing-title">
+                    <h3 class="section-tt">Limitations of BMI</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quisquam sint unde est voluptate
+                        tempore sunt neque explicabo illo quae corporis mollitia? Vitae alias rerum, doloremque eos
+                        libero doloribus placeat.</p>
+                </div>
+                <div class="closing-card">
+                    <div class="closing-header">
+                        <div class="closing-img">
+                            <img src="./images/004-gender.png" alt="">
+                        </div>
+                        <h4>Gender</h4>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum eius quas consequatur
+                        eos, similique, officiis quibusdam sed neque </p>
+                </div>
+            </div>
+
+            <div class="closing-cont-2">
+                <div class="closing-card">
+                    <div class="closing-header">
+                        <div class="closing-img">
+                            <img src="./images/005-birthday-cake.png" alt="">
+                        </div>
+                        <h4>Age</h4>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum eius quas consequatur
+                        eos, similique, officiis quibusdam sed neque </p>
+
+                </div>
+                <div class="closing-card">
+                    <div class="closing-header">
+                        <div class="closing-img">
+                            <img src="./images/006-muscle.png" alt="">
+                        </div>
+                        <h4>Muscle</h4>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum eius quas consequatur
+                        eos, similique, officiis quibusdam sed neque </p>
+
+                </div>
+            </div>
+            <div class="closing-cont-3">
+                <div class="closing-card">
+                    <div class="closing-header">
+                        <div class="closing-img">
+                            <img src="./images/007-baby.png" alt="">
+                        </div>
+                        <h4>Pregnancy</h4>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum eius quas consequatur
+                        eos, similique, officiis quibusdam sed neque</p>
+
+                </div>
+                <div class="closing-card">
+                    <div class="closing-header">
+                        <div class="closing-img">
+                            <img src="./images/008-woman.png" alt="">
+                        </div>
+                        <h4>Race</h4>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum eius quas consequatur
+                        eos, similique, officiis quibusdam sed neque </p>
+
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+
+    <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/justicon" title="justicon">justicon</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly
+            Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> 
+        
+        Photo by <a href="https://unsplash.com/@noahbuscher?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Noah Buscher</a> on <a href="https://unsplash.com/photos/woman-holding-sliced-avocado-NGm1m8u59uk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  -->
+
+    <!-- JS SCRIPT: DO NOT REMOVE UNLESS YOU DON'T WANT TO USE JAVASCRIPT  -->
+    <script src="app.js"></script>
+</body>
+
+</html>
